@@ -1,8 +1,8 @@
 /*
- * @Description:
+ * @Description: 获取数组第一位元素
  * @Author: wangfengxiang
  * @Date: 2022-11-26 23:48:44
- * @LastEditTime: 2022-11-27 00:19:09
+ * @LastEditTime: 2022-11-27 00:33:53
  * @LastEditors: wangfengxiang
  */
 
