@@ -2,7 +2,7 @@
  * @Description:
  * @Author: wangfengxiang
  * @Date: 2022-11-25 09:08:38
- * @LastEditTime: 2022-11-25 09:27:31
+ * @LastEditTime: 2022-11-26 23:39:49
  * @LastEditors: wangfengxiang
  */
 import type { Equal, Expect } from "@type-challenges/utils";
@@ -31,8 +31,10 @@ type cases = [
   >
 ];
 
+
+// 期望下面类型报错
 // @ts-expect-error
-// type error = TupleToObject<[[1, 2], {}]>
+type error = TupleToObject<[[1, 2], {}]>
 
 // 知识点
 // 1.typeof把js世界里的东西转换成ts世界东西
