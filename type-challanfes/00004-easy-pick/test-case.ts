@@ -1,3 +1,10 @@
+/*
+ * @Description: 筛选需要的对象元素
+ * @Author: wangfengxiang
+ * @Date: 2022-11-06 21:47:12
+ * @LastEditTime: 2022-12-25 08:49:51
+ * @LastEditors: wangfengxiang
+ */
 import type { Equal, Expect } from '@type-challenges/utils'
 
 type cases = [
