@@ -1,8 +1,8 @@
 /*
- * @Description:判断开头
+ * @Description: 字符串模版与 extends/infer
  * @Author: wangfengxiang
  * @Date: 2023-01-20 08:25:06
- * @LastEditTime: 2023-01-20 10:11:57
+ * @LastEditTime: 2023-01-20 22:09:51
  * @LastEditors: wangfengxiang
  */
 type str = "beyond";
@@ -32,3 +32,8 @@ type ReplaceOne<
   to extends string
 > = str extends `${infer F}${from}${infer R}` ? `${F}${to}${R}` : str;
 type res2 = ReplaceOne<str, "b", "p">;
+
+// 键值对转索引类型(必须使用 in 对key进行约束)
+type ConvertStrToRecord<str extends string> =
+  str extends `${infer key}=${infer val}` ? { [k in key]: val } : never;
+type res3 = ConvertStrToRecord<"name=lilei">;
