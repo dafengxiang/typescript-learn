@@ -2,7 +2,7 @@
  * @Description: 笔记
  * @Author: wangfengxiang
  * @Date: 2023-01-20 08:24:30
- * @LastEditTime: 2023-01-20 08:46:23
+ * @LastEditTime: 2023-01-20 10:14:01
  * @LastEditors: wangfengxiang
 -->
 
@@ -30,4 +30,18 @@ type firstUp<str extends string> = str extends `${infer F}${infer R}`
   ? `${Uppercase<F>}${R}`
   : never;
 ```
+
 5:09
+
+### 文本替换 ReplaceAll
+
+```ts
+type ReplaceOne<
+  str extends string,
+  from extends string,
+  to extends string
+> = str extends `${infer F}${from}${infer R}` ? `${F}${to}${R}` : str;
+type res2 = ReplaceOne<str, "b", "p">;
+```
+7:00
+### 键值对转索引类型

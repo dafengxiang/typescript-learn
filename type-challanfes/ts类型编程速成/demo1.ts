@@ -2,7 +2,7 @@
  * @Description:判断开头
  * @Author: wangfengxiang
  * @Date: 2023-01-20 08:25:06
- * @LastEditTime: 2023-01-20 08:41:44
+ * @LastEditTime: 2023-01-20 10:11:57
  * @LastEditors: wangfengxiang
  */
 type str = "beyond";
@@ -24,3 +24,11 @@ type isStartWith<
 type firstUp<str extends string> = str extends `${infer F}${infer R}`
   ? `${Uppercase<F>}${R}`
   : never;
+
+// 文本替换
+type ReplaceOne<
+  str extends string,
+  from extends string,
+  to extends string
+> = str extends `${infer F}${from}${infer R}` ? `${F}${to}${R}` : str;
+type res2 = ReplaceOne<str, "b", "p">;
